@@ -1,0 +1,38 @@
+/* See license.txt for terms of usage */
+
+@import url("chrome://global/skin/");
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#status-icon
+{
+  padding-right: 3px;
+}
+
+#status-label-container
+{
+  padding: 0; 
+  margin: 0;
+}
+
+#swatch-toolbarbutton
+{
+  list-style-image: url("images/swatch-toolbar.png");
+  -moz-image-region: rect(0px, 24px, 24px, 0px);
+  width: auto;
+}
+
+#swatch-toolbarbutton[swatchstate="alert"]
+{
+  -moz-image-region: rect(24px, 24px, 48px, 0px);
+}
+
+toolbar[iconsize="small"] #swatch-toolbarbutton
+{
+  list-style-image: url("images/swatch-toolbar-16.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+toolbar[iconsize="small"] #swatch-toolbarbutton[swatchstate="alert"]
+{
+  -moz-image-region: rect(16px, 16px, 32px, 0px);
+}

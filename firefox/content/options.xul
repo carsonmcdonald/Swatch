@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://swatch/skin/options.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://swatch/locale/options.dtd">
+
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept,cancel"
+        onload="SwatchOptions.loadOptions()"
+        ondialogaccept="SwatchOptions.saveOptions()"
+        id="swatch-options-dialog"
+        title="&options.title.label;">
+
+  <script type="application/x-javascript" src="chrome://swatch/content/lib/prefs.js"/>
+  <script type="application/x-javascript" src="chrome://swatch/content/common.js"/>
+
+  <script type="application/x-javascript" src="chrome://swatch/content/options.js"/>
+
+  <vbox>
+    <description id="swatch-options">&options.description;</description>
+    <separator id="swatch-options-separator"/>
+
+    <grid flex="1">
+      <columns>
+        <column/>
+        <column flex="1"/>
+      </columns>
+      <rows id="site-list">
+      </rows>
+    </grid>
+  </vbox>
+</dialog>

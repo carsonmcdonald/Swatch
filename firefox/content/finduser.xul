@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://swatch/skin/finduser.css" type="text/css"?>
+
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept,cancel"
+        id="swatch-finduser-dialog"
+        ondialogaccept="returnOptions()"
+        title="Find Profile">
+
+  <script type="application/x-javascript" src="chrome://swatch/content/lib/json2.js"/>
+  <script type="application/x-javascript" src="chrome://swatch/content/lib/sareq.js"/>
+  <script type="application/x-javascript" src="chrome://swatch/content/common.js"/>
+
+  <script type="application/x-javascript" src="chrome://swatch/content/finduser.js"/>
+
+  <vbox>
+    <label control="user-find" value="Username Search:"/>
+    <textbox id="user-find"/>
+    <button label="Lookup" id="lookup-button" image="chrome://swatch/skin/images/magnifier.png" accesskey="L" oncommand="userLookup();"/>
+
+    <separator/>
+
+    <label value="Results:"/>
+    <label id="results-info" value="Enter a search term and click Lookup."/>
+    <richlistbox id="user-find-results" rows="5">
+    </richlistbox>
+  </vbox>
+</dialog>

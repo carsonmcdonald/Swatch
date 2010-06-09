@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://swatch/skin/overlay.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://swatch/locale/overlay.dtd">
+
+<overlay id="swatch-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="chrome://swatch/content/lib/json2.js"/>
+  <script type="application/x-javascript" src="chrome://swatch/content/lib/prefs.js"/>
+  <script type="application/x-javascript" src="chrome://swatch/content/lib/sareq.js"/>
+
+  <script type="application/x-javascript" src="chrome://swatch/content/common.js"/>
+  <script type="application/x-javascript" src="chrome://swatch/content/siteinfo.js"/>
+  <script type="application/x-javascript" src="chrome://swatch/content/overlay.js"/>
+
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="swatch-menu" insertafter="devToolsSeparator" label="&swatch;" oncommand="onMenuItemCommand(event);"/>
+  </menupopup>
+
+  <statusbar id="status-bar">
+    <statusbarpanel id="status-panel">
+      
+      <image id="status-icon" onclick="onStatusIconClick(event);"/>
+      <description id="status-label-container" width="75" onclick="onStatusLabelClick(event);"><html:div xmlns:html="http://www.w3.org/1999/xhtml" id="status-label">Loading...</html:div></description>
+
+    </statusbarpanel>
+  </statusbar>
+
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="swatch-toolbarbutton" insertbefore="print-button" label="Swatch" type="menu-button" oncommand="onMenuItemCommand(event);" class="chromeclass-toolbar-additional">
+      <panel id="test-popup" style="border: 0" onpopuphiding="onDetailHide(event);" onpopupshowing="onDetailShow(event);">
+        <vbox style="border: 1px solid #aaa;">
+          <hbox align="right" style="padding: 5px; background-color: #aae; border-bottom: 2px solid #77b;">
+           <image width="16" id="site-icon"/> <label id="swatch-service-title" width="350" style="text-align: center; font-weight: bold;"/> <image id="swatch-previous-site" onclick="onSiteChangeClick(event, -1);" src="chrome://swatch/skin/images/resultset_previous.png" style="background-color: #eee; border: 1px solid #aaa;" tooltip="Previous site"/> <image id="swatch-next-site" onclick="onSiteChangeClick(event, 1);" src="chrome://swatch/skin/images/resultset_next.png" style="background-color: #eee; border: 1px solid #aaa;" tooltip="Next site"/>
+          </hbox>
+
+          <hbox style="padding-top: 10px; padding-bottom: 10px;">
+            <label value="Reputation:" style="font-weight: bold;"/>
+            <label id="swatch-rep-display" value="" width="100"/>
+            <seperator/>
+            <label value="Badges:" style="font-weight: bold;"/>
+            <description><html:div xmlns:html="http://www.w3.org/1999/xhtml" id="swatch-badge-display"></html:div></description>
+          </hbox>
+
+          <tabbox id="myTabList" selectedIndex="0">
+            <tabs style="padding-left: 5px;">
+              <tab label="Mentions"/>
+            </tabs>
+            <tabpanels style="background-color: #eee; margin-left: 1px; margin-bottom: 1px; margin-top: 1px; border: 0;">
+              <tabpanel height="190" width="400" style="border-top: 0;">
+                <label id="swatch-mentions-error" style="width: 390px;"><html:p xmlns:html="http://www.w3.org/1999/xhtml" id="swatch-mentions-error-value"></html:p></label>
+                <label id="swatch-no-mentions">No recent mentions.</label>
+                <hbox id="swatch-mentions">
+                  <vbox>
+                    <label class="text-link" id="swatch-mention-title" onclick="onMentionDetailClick();"/>
+                    <description width="375" height="130" style="padding: 10px; background-repeat: no-repeat; background-image: url('chrome://swatch/skin/images/comment-bubble.png')"><html:p xmlns:html="http://www.w3.org/1999/xhtml" style="font-size: 8pt; margin:0; overflow: auto; height: 90px;" id="swatch-mention-comment"/></description>
+                    <hbox align="right"><label class="text-link" id="swatch-mention-byuser" onclick="onMentionUserClick(event);"/><label id="swatch-mention-time"/></hbox>
+                    <!--<textbox width="375" multiline="true" rows="4" id="swatch-mention-reply"/>-->
+                  </vbox>
+                  <vbox>
+                    <image id="swatch-up-mention" onclick="moveOneMentionClick(event, -1);" src="chrome://swatch/skin/images/resultset_up_disabled.png" style="background-color: #eee; border: 1px solid #aaa;" tooltip="Previous mention"/>
+                    <image id="swatch-down-mention" onclick="moveOneMentionClick(event, 1);" src="chrome://swatch/skin/images/resultset_down_disabled.png" style="background-color: #eee; border: 1px solid #aaa;" tooltip="Next mention"/>
+                    <image id="swatch-new-mention" src="chrome://swatch/skin/images/new.png" style="padding-top: 10px;" tooltip="New mention"/>
+                  </vbox>
+                </hbox>
+              </tabpanel>
+            </tabpanels>
+          </tabbox>
+        </vbox>
+      </panel>
+    </toolbarbutton>
+  </toolbarpalette>
+
+</overlay>

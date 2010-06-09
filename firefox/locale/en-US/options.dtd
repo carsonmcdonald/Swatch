@@ -1,0 +1,5 @@
+<!ENTITY options.title.label "Swatch Options">
+<!ENTITY options.description "Enter your Stack Exchange user IDs here for the sites you want to track.">
+<!ENTITY stackoverflow.uid.description "Stack Overflow User ID">
+<!ENTITY serverfault.uid.description "Server Fault User ID">
+<!ENTITY superuser.uid.description "Super User User ID">

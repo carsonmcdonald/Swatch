@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<prefwindow id="swatch-prefs" title="Swatch Plugin Options" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <prefpane id="swatch-prefpane" label="Swatch Plugin Options">
+    <preferences>
+      <preference id="pref-refresh" name="swatch.refresh" type="int"/>
+      <preference id="pref-rd-type" name="swatch.rep.display" type="string"/>
+    </preferences>
+
+    <vbox align="right">
+      <label>Refresh frequency in seconds (minimum of 5 seconds):</label>
+      <textbox label="Refresh frequency:" preference="pref-refresh" id="Refresh" />
+
+      <label>Reputation display type:</label>
+      <menulist label="Rep Display Type:" preference="pref-rd-type" id="RepDisplay">
+        <menupopup>
+          <menuitem label="Short (100.1k)" value="short"/>
+          <menuitem label="Comma (100,000)" value="comma"/>
+        </menupopup>
+      </menulist>
+    </vbox>
+  </prefpane>
+
+</prefwindow>

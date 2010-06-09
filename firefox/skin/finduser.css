@@ -1,0 +1,15 @@
+/* See license.txt for terms of usage */
+
+@import url("chrome://global/skin/");
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#swatch-finduser-dialog
+{
+  width: 35em;
+  height: 45em;
+}
+
+#user-find-results
+{
+  height: 35em;
+}

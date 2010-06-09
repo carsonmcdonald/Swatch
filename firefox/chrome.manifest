@@ -1,0 +1,7 @@
+content	swatch	content/
+skin	swatch	classic/1.0	skin/
+locale	swatch	en-US	locale/en-US/
+
+overlay	chrome://browser/content/browser.xul	        chrome://swatch/content/overlay.xul
+
+style   chrome://global/content/customizeToolbar.xul    chrome://swatch/skin/overlay.css
