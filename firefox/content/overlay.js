@@ -637,7 +637,7 @@ SwatchUpdater.prototype.update = function()
   }
 
   clearTimeout(this.currentTimeout);
-  this.currentTimeout = setTimeout('onTimeout()', (Prefs.getInteger("swatch.refresh") < 5 ? 15 : Prefs.getInteger("swatch.refresh")) * 1000);
+  this.currentTimeout = setTimeout('onTimeout()', (Prefs.getInteger("swatch.refresh") < 60 ? 60 : Prefs.getInteger("swatch.refresh")) * 1000);
 }
 
 var swatchUpdater = new SwatchUpdater();

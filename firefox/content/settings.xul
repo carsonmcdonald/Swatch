@@ -11,7 +11,7 @@
     </preferences>
 
     <vbox align="right">
-      <label>Refresh frequency in seconds (minimum of 5 seconds):</label>
+      <label>Refresh frequency in seconds (minimum of 60 seconds):</label>
       <textbox label="Refresh frequency:" preference="pref-refresh" id="Refresh" />
 
       <label>Reputation display type:</label>
