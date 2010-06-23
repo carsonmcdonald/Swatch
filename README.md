@@ -12,6 +12,10 @@ Instructions for using the plugin can be found [here][1].
 
 The following is a short list of main features added with each release.
 
+**Version 1.3**
+
+ - Force refresh delay to be greater than 60 seconds
+
 **Version 1.2**
 
  - Added toolbar button and icon, will update with status changes
