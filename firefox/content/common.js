@@ -5,11 +5,11 @@ MONTH_NAMES = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 
 SITES_CONFIG =
 {
-  'stackoverflow': { iconUrl: 'http://stackoverflow.com/favicon.ico', siteUrl: 'http://stackoverflow.com/', apiBase: 'http://api.stackoverflow.com', userKey: 'swatch.so.uid', name: 'Stack Overflow', cssId: 'so-uid' },
-  'serverfault': { iconUrl: 'http://serverfault.com/favicon.ico', siteUrl: 'http://serverfault.com/', apiBase: 'http://api.serverfault.com', userKey: 'swatch.sf.uid', name: 'Server Fault', cssId: 'sf-uid' },
-  'superuser': { iconUrl: 'http://superuser.com/favicon.ico', siteUrl: 'http://superuser.com/', apiBase: 'http://api.superuser.com', userKey: 'swatch.su.uid', name: 'Super User', cssId: 'su-uid' },
-  'metaso': { iconUrl: 'http://meta.stackoverflow.com/favicon.ico', siteUrl: 'http://meta.stackoverflow.com/', apiBase: 'http://api.meta.stackoverflow.com', userKey: 'swatch.mo.uid', name: 'Meta Stack Overflow', cssId: 'mo-uid' },
-  'stackapps': { iconUrl: 'http://stackapps.com/favicon.ico', siteUrl: 'http://stackapps.com/', apiBase: 'http://api.stackapps.com', userKey: 'swatch.sa.uid', name: 'Stack Apps', cssId: 'sa-uid' }
+  'stackoverflow': { iconUrl: 'http://sstatic.net/so/favicon.ico', siteUrl: 'http://stackoverflow.com/', apiBase: 'http://api.stackoverflow.com', userKey: 'swatch.so.uid', name: 'Stack Overflow', cssId: 'so-uid' },
+  'serverfault': { iconUrl: 'http://sstatic.net/sf/favicon.ico', siteUrl: 'http://serverfault.com/', apiBase: 'http://api.serverfault.com', userKey: 'swatch.sf.uid', name: 'Server Fault', cssId: 'sf-uid' },
+  'superuser': { iconUrl: 'http://sstatic.net/su/favicon.ico', siteUrl: 'http://superuser.com/', apiBase: 'http://api.superuser.com', userKey: 'swatch.su.uid', name: 'Super User', cssId: 'su-uid' },
+  'metaso': { iconUrl: 'http://sstatic.net/mso/favicon.ico', siteUrl: 'http://meta.stackoverflow.com/', apiBase: 'http://api.meta.stackoverflow.com', userKey: 'swatch.mo.uid', name: 'Meta Stack Overflow', cssId: 'mo-uid' },
+  'stackapps': { iconUrl: 'http://sstatic.net/sa/favicon.ico', siteUrl: 'http://stackapps.com/', apiBase: 'http://api.stackapps.com', userKey: 'swatch.sa.uid', name: 'Stack Apps', cssId: 'sa-uid' }
 };
 
 API_KEY = 'DoTSH3_I7Emur-G8033suw';
