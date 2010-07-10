@@ -39,7 +39,7 @@ if (!runningInNode())
 
   SAReq.prototype.buildUrl = function()
   {
-    var url = '/0.9/'; 
+    var url = '/1.0/'; 
 
     url += this.pathParts.join('/'); 
 
